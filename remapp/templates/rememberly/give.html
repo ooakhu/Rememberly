@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset= "utf-8">
+    <meta http-equiv="X-UA-Compatible" content= "IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <title>Rememberly</title>
+    <link rel="stylesheet" href="{% static 'css/remapp.css' %}">
+</head>
+
+<body>
+    <div class="header-container">
+        <img src="{% static "css/triangle.svg" %}" alt="image" style="width: 20px;
+height: 20px;">
+        <h3 style="font-size: x-large;">REMEMBERLY</h3>
+    </div>
+    {% block content %}
+
+
+
+    {% endblock %}
+
+
+     </div>
+
+        <a href="{% url 'remapp:index' %}">Rememberly</a>
+
+     </div>
+ <footer>
+     <p>contact : ooakhu@gmail.com</p>
+ </footer>
+</body>
+</html>

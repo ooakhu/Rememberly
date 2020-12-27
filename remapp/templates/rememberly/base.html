@@ -1,0 +1,85 @@
+{% load static %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset= "utf-8">
+    <meta http-equiv="X-UA-Compatible" content= "IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <title>Rememberly</title>
+    <link rel="stylesheet" href="{% static 'css/remapp.css' %}">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  </head>
+    
+    <body>
+        <div class="header-container">
+            <img src="{% static "css/triangle.svg" %}" alt="image" style="width: 20px;
+    height: 20px;">
+            <h3 style="font-size: x-large;">REMEMBERLY</h3>
+        </div>
+
+        <div class="Description" style="text-align: center; color: #9d9d9c; width: 400px">
+            <p>
+                <span>Rememberly</span> is a Journal keeping app which offers organized navigation though journals and daily entries for people who are enthusiastic about writing.
+            </p>
+        </div>
+
+        <div class="main">
+            <div class="card">
+                <img src="{% static "css/note.svg" %}" alt="image" >
+                <h3>Feel Your Journal</h3>
+                <p>Rememberly is so intuitive that you don't even miss the feel of a physical journal.</p>
+                <div>
+                    {% if user.is_authenticated %}
+                        <a>Hello, {{ user.username }}</a>
+                    {% else %}
+                        <a style="text-decoration: none" href="{% url 'users:register' %}"><button class="raise">Register</button></a>
+                        <a style="text-decoration: none" href="{% url 'users:login' %}"><button class="raise-up">Log in</button></a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="card" style="margin-bottom: 100px;">
+                <img src="{% static "css/organized.svg" %}" alt="image" >
+                <h3>Organized and Fast</h3>
+                <p>All your entries are just a few taps away, organized and intuitive.</p>
+                <div>
+                    {% if user.is_authenticated %}
+                        <div class="top">
+                            <a>Hello, {{ user.username }}</a>
+                            <a href= "{% url 'remapp:topics' %}">Topics</a>
+                            <a href= "{% url 'users:logout' %}">Log out</a>
+                        </div>
+
+                    {% else %}
+                        <a style="text-decoration: none" href="{% url 'users:register' %}"><button class="raise">Register</button></a>
+                        <a style="text-decoration: none" href="{% url 'users:login' %}"><button class="raise-up">Log in</button></a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static "css/mobile.svg" %}" alt="image" >
+                <h3>Read Along Mode</h3>
+                <p>Rememberly offers a dedicated reading mode for focused reading experience.</p>
+                <div>
+                    {% if user.is_authenticated %}
+                        <a>Hello, {{ user.username }}</a>
+                    {% else %}
+                        <a style="text-decoration: none" href="{% url 'users:register' %}"><button class="raise">Register</button></a>
+                        <a style="text-decoration: none" href="{% url 'users:login' %}"><button class="raise-up">Log in</button></a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <a style="font-family: 'Righteous', cursive; text-decoration: none;" href="{% url 'remapp:index' %}">Rememberly</a>
+
+         </div>
+
+     <footer>
+         <p>contact : ooakhu@gmail.com</p>
+     </footer>
+    </body>
+</html>

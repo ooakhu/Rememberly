@@ -1,0 +1,15 @@
+{% extends "rememberly/give.html" %}
+
+
+{% block content %}
+    {% block header %}
+      <h2>Add a new topic</h2>
+    {% endblock header %}
+
+      <form action = "{% url 'remapp:new_topic' %}" method = "post" class="form">
+        {% csrf_token %}
+                {{ form }}
+            <input type="submit" value="Submit">
+      </form>
+
+{% endblock content %}
