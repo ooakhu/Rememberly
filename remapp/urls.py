@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+
 
 """Defines URL patterns for remapp"""
 from django.conf.urls import url

@@ -20,7 +20,7 @@
             <h3 style="font-size: x-large;">REMEMBERLY</h3>
         </div>
 
-        <div class="Description" style="text-align: center; color: #9d9d9c; width: 400px">
+        <div class="description" style="text-align: center; color: #9d9d9c; width: 400px">
             <p>
                 <span>Rememberly</span> is a Journal keeping app which offers organized navigation though journals and daily entries for people who are enthusiastic about writing.
             </p>
@@ -30,7 +30,7 @@
             <div class="card">
                 <img src="{% static "css/note.svg" %}" alt="image" >
                 <h3>Feel Your Journal</h3>
-                <p>Rememberly is so intuitive that you don't even miss the feel of a physical journal.</p>
+                <p>Rememberly is so easy on the eyes that you don't even miss the feel of a physical journal.</p>
                 <div>
                     {% if user.is_authenticated %}
                         <a>Hello, {{ user.username }}</a>
@@ -73,7 +73,7 @@
             </div>
         </div>
 
-        </div>
+        <div>
             <a style="font-family: 'Righteous', cursive; text-decoration: none;" href="{% url 'remapp:index' %}">Rememberly</a>
 
          </div>
