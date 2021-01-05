@@ -144,3 +144,9 @@ input {
 input:focus {
     outline: none;
 }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+}
