@@ -1,1 +1,1 @@
-web: gunicorn rememberly.wsgi
+web: gunicorn rememberly.wsgi --log-file -
