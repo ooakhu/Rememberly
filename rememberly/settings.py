@@ -126,10 +126,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    'remapp/templates/rememberly/',
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+#     'remapp/templates/rememberly/',
+# ]
 
 # My settings
 LOGIN_URL = '/users/login/'
@@ -148,7 +150,7 @@ BOOTSTRAP3 = {
 #     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
 #
 #     #Allow only Heroku to host the project.
-#     ALLOWED_HOSTS = ['orangepaper.herokuapp.com']
+
 #
 #     DEBUG = False
 #
@@ -158,3 +160,6 @@ BOOTSTRAP3 = {
 #     STATICFILES_DIRS = (
 #         os.path.join(BASE_DIR,'static'),
 #         )
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())

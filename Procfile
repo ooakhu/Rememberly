@@ -1,1 +1,1 @@
-web: gunicorn orange_paper.wsgi --log-file -
+web: gunicorn rememberly.wsgi
