@@ -15,9 +15,9 @@
 
 # Built With
 
-* [Python](https://.com) : Base programming language for development
+* [Python](https://www.python.org/) : Base programming language for development
 * [Django Framework](https://www.djangoproject.com/) : Development framework used for the application
-* [SQLite](https://.com) Application relational databases for development and staging enviroments
+* [SQLite](https://www.sqlite.org/index.html) Application relational databases for development and staging enviroments
 
 
 
